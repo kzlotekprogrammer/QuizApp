@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="playing_activity_button_next_text">Dalej</string>
+    <string name="playing_activity_text_view_score_count">Pytanie</string>
+</resources>
