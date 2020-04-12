@@ -122,7 +122,7 @@ public class PlayingActivity extends AppCompatActivity {
         Question currentQuestion = questions.get(currentQuestionIndex);
         String[] answers = new String[]{currentQuestion.answer_1, currentQuestion.answer_2, currentQuestion.answer_3, currentQuestion.answer_4};
         for(int i = 0; i < answerButtons.length; i++) {
-            answerButtons[i].setBackground(getDrawable(R.drawable.gradient_blue));
+            answerButtons[i].setBackground(getDrawable(R.drawable.gradient_primary));
             answerButtons[i].setText(answers[i]);
         }
 

@@ -2,6 +2,7 @@ package com.example.quizapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.quizapp.database.AppDatabase;
@@ -9,6 +10,7 @@ import com.example.quizapp.database.CategoryDao;
 import com.example.quizapp.database.QuestionDao;
 import com.example.quizapp.model.Category;
 import com.example.quizapp.model.Question;
+import com.example.quizapp.ui.CategorySelectionActivity;
 import com.example.quizapp.ui.PlayingActivity;
 
 import java.util.Random;
@@ -34,15 +36,19 @@ public class MainActivity extends AppCompatActivity {
                 categoryDao.deleteAllCategories();
                 questionDao.deleteQuestions();
 
-                Category category = new Category(1, randomString(20));
+                Category category = new Category(1, randomString(10), randomString(30));
                 categoryDao.insertCategories(category);
+
+                for(int i = 0; i < 10; i++) {
+                    categoryDao.insertCategories(new Category(i+2, randomString(10), randomString(30)));
+                }
 
                 for(int i = 0; i < 20; i++) {
                     questionDao.insertQuestions(new Question(i, category.categoryId, randomString(60) + "?", randomString(10), randomString(10), randomString(10),
                             randomString(10), 1));
                 }
 
-                startActivity(PlayingActivity.createIntentForQuestionActivity(MainActivity.this, category));
+                startActivity(new Intent(MainActivity.this, CategorySelectionActivity.class));
             }
         };
 
