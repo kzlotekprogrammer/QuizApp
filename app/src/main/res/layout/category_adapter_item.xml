@@ -20,17 +20,17 @@
                 android:id="@+id/category_adapter_item_category_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="36sp"
-                android:background="@color/colorSecondaryDarker"/>
+                android:background="@color/colorPrimaryDarker"/>
 
             <TextView
                 android:id="@+id/category_adapter_item_category_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="28sp"
-                android:background="@color/colorSecondary"/>
+                android:background="@color/colorPrimary"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

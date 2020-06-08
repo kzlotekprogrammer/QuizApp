@@ -14,6 +14,7 @@ import com.example.quizapp.R;
 import com.example.quizapp.database.AppDatabase;
 import com.example.quizapp.model.Category;
 import com.example.quizapp.model.Question;
+import com.example.quizapp.model.Result;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
@@ -57,6 +58,8 @@ public class PlayingActivity extends AppCompatActivity {
                         correctAnswers++;
                     } else {
                         v.setBackground(getDrawable(R.drawable.gradient_red));
+                      int silka=  questions.get(currentQuestionIndex).correctAnswer-1;
+                      answerButtons[silka].setBackground(getDrawable(R.drawable.gradient_green));;
                     }
                     setAnswerButtonsState(false);
                 }
@@ -73,6 +76,8 @@ public class PlayingActivity extends AppCompatActivity {
                     updateViews();
                 } else {
                     //todo show result
+                   finish();
+                    startActivity(ResultActivity.createIntentForResultActivity(PlayingActivity.this, new Result(correctAnswers, questions.size())));
                 }
             }
         });
@@ -106,6 +111,10 @@ public class PlayingActivity extends AppCompatActivity {
             PlayingActivity playingActivity = playingActivityWeakReference.get();
             if(playingActivity == null || playingActivity.isFinishing()) {
                 return;
+            }
+
+            if(queryResult.size() <= 0) {
+                playingActivity.finish();
             }
 
             playingActivity.questions = queryResult;

@@ -11,30 +11,18 @@
 
     <TextView
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/separator"
+        app:layout_constraintBottom_toTopOf="@+id/playing_activity_text_view_question_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:id="@+id/playing_activity_text_view_score_count"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textSize="32sp"
-        android:textColor="#AAAAAA"/>
-
-    <View
-        app:layout_constraintBottom_toTopOf="@id/playing_activity_text_view_question_content"
-        app:layout_constraintTop_toBottomOf="@id/playing_activity_text_view_score_count"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:id="@+id/separator"
-        android:layout_width="0dp"
-        android:layout_height="5dip"
-        android:background="@drawable/dotted_line"
-        android:layerType="software"
-        android:orientation="vertical" />
+        android:textColor="@android:color/white"/>
 
     <TextView
         app:layout_constraintBottom_toTopOf="@id/playing_activity_button_answer_1"
-        app:layout_constraintTop_toBottomOf="@id/separator"
+        app:layout_constraintTop_toBottomOf="@id/playing_activity_text_view_score_count"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:id="@+id/playing_activity_text_view_question_content"

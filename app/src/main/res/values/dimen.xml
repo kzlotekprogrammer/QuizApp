@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fontSizeBigPlus" translatable="false">36sp</string>
+    <string name="fontSizeBig" translatable="false">32sp</string>
+    <string name="fontSizeNormalPlus" translatable="false">28sp</string>
+    <string name="fontSizeNormal" translatable="false">24sp</string>
+    <string name="fontSizeSmallPlus" translatable="false">18sp</string>
+</resources>

@@ -11,10 +11,10 @@ import java.util.List;
 @Dao
 public abstract class QuestionDao {
     @Query("SELECT * FROM question WHERE categoryId = :categoryId")
-    public abstract List<Question> getQuestionsByCategoryId(int categoryId);
+    public abstract List<Question> getQuestionsByCategoryId(String categoryId);
 
     @Query("SELECT * FROM Question WHERE questionId = :questionId")
-    public abstract Question getQuestionById(int questionId);
+    public abstract Question getQuestionById(String questionId);
 
     @Insert
     public abstract void insertQuestions(Question... question);
