@@ -3,7 +3,6 @@ package com.example.quizapp.ui;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +10,6 @@ import android.view.Window;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.example.quizapp.MainActivity;
 import com.example.quizapp.R;
 import com.example.quizapp.database.AppDatabase;
 import com.example.quizapp.database.CategoryDao;
@@ -127,11 +125,10 @@ public class SynchronizationActivity extends AppCompatActivity {
             }
 
             for(String questionId : synchronizationActivity.questions.keySet()) {
-                String correctAnswer = synchronizationActivity.questions.get(questionId).get("TrueAnswer");
                 questionDao.insertQuestions(new Question(questionId, synchronizationActivity.questions.get(questionId).get("CategoryId"), synchronizationActivity.questions.get(questionId).get("Content"),
                         synchronizationActivity.questions.get(questionId).get("Answer1"), synchronizationActivity.questions.get(questionId).get("Answer2"),
                         synchronizationActivity.questions.get(questionId).get("Answer3"), synchronizationActivity.questions.get(questionId).get("Answer4"),
-                        correctAnswer.charAt(correctAnswer.length()-1)-48));
+                        synchronizationActivity.questions.get(questionId).get("TrueAnswer")));
             }
 
             return null;
