@@ -33,7 +33,8 @@ public class ResultActivity extends AppCompatActivity {
 
         result = (Result) getIntent().getSerializableExtra(INTENT_PARAM_RESULT);
 
-        ((TextView)findViewById(R.id.result_activity_score)).setText(result.getGoodAnswers() + "/" + result.getTotalQuestions());
+        String resultTxt = String.format(getString(R.string.str_info_udzielono_na_poprawnych_odpowiedzi_fmt), result.getGoodAnswers(),  result.getTotalQuestions());
+        ((TextView)findViewById(R.id.result_activity_score)).setText(resultTxt);
 
         return_menu = findViewById(R.id.result_activity_return);
         return_menu.setOnClickListener(new View.OnClickListener() {

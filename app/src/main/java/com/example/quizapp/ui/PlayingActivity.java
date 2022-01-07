@@ -49,16 +49,16 @@ public class PlayingActivity extends AppCompatActivity {
         this.answerButtons[3] = findViewById(R.id.playing_activity_button_answer_4);
 
         for(int i = 0; i < answerButtons.length; i++) {
-            final int answerNumber = i+1;
+            final String tmp = String.valueOf((char)(i + 'A'));
             answerButtons[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(answerNumber == questions.get(currentQuestionIndex).correctAnswer) {
+                    if(tmp.equals(questions.get(currentQuestionIndex).trueAnswer)) {
                         v.setBackground(getDrawable(R.drawable.gradient_green));
                         correctAnswers++;
                     } else {
                         v.setBackground(getDrawable(R.drawable.gradient_red));
-                      int silka=  questions.get(currentQuestionIndex).correctAnswer-1;
+                      int silka = questions.get(currentQuestionIndex).trueAnswer.charAt(0) - 'A';
                       answerButtons[silka].setBackground(getDrawable(R.drawable.gradient_green));;
                     }
                     setAnswerButtonsState(false);

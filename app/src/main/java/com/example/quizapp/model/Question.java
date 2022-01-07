@@ -17,9 +17,9 @@ public class Question implements Serializable {
     public String answer_2;
     public String answer_3;
     public String answer_4;
-    public int correctAnswer;
+    public String trueAnswer;
 
-    public Question(String questionId, String categoryId, String questionContent, String answer_1, String answer_2, String answer_3, String answer_4, int correctAnswer) {
+    public Question(String questionId, String categoryId, String questionContent, String answer_1, String answer_2, String answer_3, String answer_4, String trueAnswer) {
         this.questionId = questionId;
         this.categoryId = categoryId;
         this.questionContent = questionContent;
@@ -27,6 +27,6 @@ public class Question implements Serializable {
         this.answer_2 = answer_2;
         this.answer_3 = answer_3;
         this.answer_4 = answer_4;
-        this.correctAnswer = correctAnswer;
+        this.trueAnswer = trueAnswer;
     }
 }

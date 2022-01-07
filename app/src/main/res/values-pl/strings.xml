@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quiz</string>
+    <string name="app_name">QuizApp</string>
     <string name="playing_activity_button_next_text">Dalej</string>
     <string name="playing_activity_text_view_score_count">Pytanie</string>
+    <string name="start">Start</string>
+    <string name="update">Aktualizuj</string>
+
+    <string name="categories_downloaded_info">Pobrano kategorie</string>
+    <string name="questions_downloaded_info">Pobrano pytania</string>
+    <string name="questions_downloading_error">Nie udało się pobrać pytań</string>
+    <string name="categories_downloading_error">Nie udało się pobrać kategorii</string>
+    <string name="updated_successfully">Pomyślnie zaktualizowano</string>
+    <string name="ok">Ok</string>
+    <string name="theEnd">Koniec</string>
+    <string name="str_info_udzielono_na_poprawnych_odpowiedzi_fmt">Udzielono %d/%d poprawnych odpowiedzi</string>
 </resources>
